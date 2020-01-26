@@ -4,7 +4,7 @@ import java.util.Objects;
 
 public class Job {
 
-    private int id = 0;
+    private int id;
     private static int nextId = 1;
 
     private String name;
@@ -91,5 +91,50 @@ public class Job {
     public int getId() {
         return id;
     }
+
+    @Override
+    public String toString(){
+        String aString = "\n" + "\n";
+        if(getName() == null){
+            aString = "\n" + "ID: " + getId() + "\n" + "Name: Data not available";
+
+        }
+        else{
+            aString = "\n" + "ID: " + getId() + "\n" + "Name: " + getName();
+        }
+
+        if(getEmployer() == null){
+            aString = aString +"\n" + "Employer: Data not available";
+        }
+        else {
+            aString = aString + "\n" + "Employer: " + getEmployer();
+        }
+
+        if(getLocation() == null){
+            aString = aString + "\n" + "Location: Data not available";
+        }
+        else {
+            aString = aString + "\n" + "Location: " + getLocation();
+        }
+
+        if(getPositionType() == null){
+            aString = aString + "\n" + "Position Type: Data not available";
+        }
+        else {
+            aString = aString + "\n" + "Position Type: " + getPositionType();
+        }
+
+        if(getCoreCompetency() == null){
+            aString = aString + "\n" + "Core Competency: Data not available";
+        }
+        else {
+            aString = aString + "\n" + "Core Competency: " + getCoreCompetency() + "\n";
+        }
+
+
+        return aString;
+    }
+
+
 
 }
