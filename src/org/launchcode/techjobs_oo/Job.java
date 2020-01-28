@@ -80,9 +80,7 @@ public class Job {
         this.positionType = positionType;
     }
 
-    public CoreCompetency getCoreCompetency() {
-        return coreCompetency;
-    }
+    public CoreCompetency getCoreCompetency() { return coreCompetency; }
 
     public void setCoreCompetency(CoreCompetency coreCompetency) {
         this.coreCompetency = coreCompetency;
@@ -94,44 +92,41 @@ public class Job {
 
     @Override
     public String toString(){
-        String aString = "\n" + "\n";
-        if(getName() == null){
+        String aString;
+        if(getName().equals("")){
             aString = "\n" + "ID: " + getId() + "\n" + "Name: Data not available";
-
         }
         else{
             aString = "\n" + "ID: " + getId() + "\n" + "Name: " + getName();
         }
 
-        if(getEmployer() == null){
+        if(getEmployer().getValue().equals("")){
             aString = aString +"\n" + "Employer: Data not available";
         }
         else {
             aString = aString + "\n" + "Employer: " + getEmployer();
         }
 
-        if(getLocation() == null){
+        if(getLocation().getValue().equals("")){
             aString = aString + "\n" + "Location: Data not available";
         }
         else {
             aString = aString + "\n" + "Location: " + getLocation();
         }
 
-        if(getPositionType() == null){
+        if(getPositionType().getValue().equals("")){
             aString = aString + "\n" + "Position Type: Data not available";
         }
         else {
             aString = aString + "\n" + "Position Type: " + getPositionType();
         }
 
-        if(getCoreCompetency() == null){
+        if(getCoreCompetency().getValue().equals("")){
             aString = aString + "\n" + "Core Competency: Data not available";
         }
         else {
             aString = aString + "\n" + "Core Competency: " + getCoreCompetency() + "\n";
         }
-
-
         return aString;
     }
 
